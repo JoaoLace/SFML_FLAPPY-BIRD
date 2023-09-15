@@ -48,7 +48,6 @@ void Player::updateInput()
 	{
 		texture.loadFromFile("Files/planeUp.png");
 		shape.setTexture(texture);
-		std::cout << "Jump\n";
 		posY = shape.getPosition().y;
 		shape.move(0.f, -50.f);
 	}
@@ -75,4 +74,10 @@ void Player::render(sf::RenderTarget* target)
 const sf::FloatRect Player::getBounds() const
 {
 	return shape.getGlobalBounds();
+}
+
+
+void Player::setPos(int pos)
+{
+	shape.setPosition(shape.getPosition().x, pos);
 }

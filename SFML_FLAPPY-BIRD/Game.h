@@ -2,6 +2,7 @@
 #include "Player.h"
 #include "Enemy.h"
 #include <vector>
+#include <time.h>
 class Game
 {
 private:
@@ -11,10 +12,26 @@ private:
 	std::vector<Enemy*> enemies2;
 	sf::RenderWindow* window;
 
+	sf::Font font;
+	sf::Text text;
+	sf::Text gameOver;
+	void initFont();
+
+	int Points;
+	void updatePoints();
+	void renderPoints();
+
 	int	spawnTimer;
 	int spawnTimerMax;
 	int sizeOfEnemy;
 
+	bool playerVivo;
+
+	// background
+	sf::Texture texture;
+	sf::Sprite sprite;
+
+	void initBackground();
 	void initWindow();
 	void initVariables();
 	void initPlayer();
@@ -27,5 +44,8 @@ public:
 	void update();
 	void render();
 	void pollEvents();
+	void renderBackground();
+	void updateLimits();
+	void updateCollision();
 };
 

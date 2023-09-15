@@ -8,7 +8,7 @@ class Enemy
 	void initSprite();
 	void initVariables();
 public:
-	Enemy(int pos_x, int pos_y);
+	Enemy(int pos_x, int pos_y,float scale);
 	virtual ~Enemy();
 
 	const int width() const;

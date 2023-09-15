@@ -10,9 +10,10 @@ void Enemy::initVariables()
 {
 }
 
-Enemy::Enemy(int pos_x, int pos_y)
+Enemy::Enemy(int pos_x, int pos_y,float scale)
 {
 	sprite.setPosition(pos_x, pos_y);
+	sprite.setScale(1, scale/10);
 	initSprite();
 	initVariables();
 }

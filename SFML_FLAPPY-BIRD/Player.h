@@ -3,6 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include <iostream>
+#include <sstream>
 class Player
 {
 private:
@@ -28,5 +29,7 @@ public:
 	void update();
 	void render(sf::RenderTarget* target);
 	const sf::FloatRect getBounds() const;
+
+	void setPos(int pos);
 };
 
